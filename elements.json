@@ -1,0 +1,1182 @@
+{
+    "H": {
+        "atomic_number": 1,
+        "electronegativity": 2.2,
+        "group": 1,
+        "period": 1,
+        "atomic_mass": 1.008,
+        "valence_electrons": 1,
+        "hypothetical_binding_affinity": 0.3,
+        "element_category": "Nonmetal"
+    },
+    "He": {
+        "atomic_number": 2,
+        "electronegativity": null,
+        "group": 18,
+        "period": 1,
+        "atomic_mass": 4.0026,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.01,
+        "element_category": "Noble Gas"
+    },
+    "Li": {
+        "atomic_number": 3,
+        "electronegativity": 0.98,
+        "group": 1,
+        "period": 2,
+        "atomic_mass": 6.94,
+        "valence_electrons": 1,
+        "hypothetical_binding_affinity": 0.2,
+        "element_category": "Alkali Metal"
+    },
+    "Be": {
+        "atomic_number": 4,
+        "electronegativity": 1.57,
+        "group": 2,
+        "period": 2,
+        "atomic_mass": 9.012,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.25,
+        "element_category": "Alkaline Earth Metal"
+    },
+    "B": {
+        "atomic_number": 5,
+        "electronegativity": 2.04,
+        "group": 13,
+        "period": 2,
+        "atomic_mass": 10.81,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.4,
+        "element_category": "Metalloid"
+    },
+    "C": {
+        "atomic_number": 6,
+        "electronegativity": 2.55,
+        "group": 14,
+        "period": 2,
+        "atomic_mass": 12.011,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.7,
+        "element_category": "Nonmetal"
+    },
+    "N": {
+        "atomic_number": 7,
+        "electronegativity": 3.04,
+        "group": 15,
+        "period": 2,
+        "atomic_mass": 14.007,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.8,
+        "element_category": "Nonmetal"
+    },
+    "O": {
+        "atomic_number": 8,
+        "electronegativity": 3.44,
+        "group": 16,
+        "period": 2,
+        "atomic_mass": 15.999,
+        "valence_electrons": 6,
+        "hypothetical_binding_affinity": 0.9,
+        "element_category": "Nonmetal"
+    },
+    "F": {
+        "atomic_number": 9,
+        "electronegativity": 3.98,
+        "group": 17,
+        "period": 2,
+        "atomic_mass": 18.998,
+        "valence_electrons": 7,
+        "hypothetical_binding_affinity": 0.95,
+        "element_category": "Halogen"
+    },
+    "Ne": {
+        "atomic_number": 10,
+        "electronegativity": null,
+        "group": 18,
+        "period": 2,
+        "atomic_mass": 20.18,
+        "valence_electrons": 8,
+        "hypothetical_binding_affinity": 0.01,
+        "element_category": "Noble Gas"
+    },
+    "Na": {
+        "atomic_number": 11,
+        "electronegativity": 0.93,
+        "group": 1,
+        "period": 3,
+        "atomic_mass": 22.99,
+        "valence_electrons": 1,
+        "hypothetical_binding_affinity": 0.15,
+        "element_category": "Alkali Metal"
+    },
+    "Mg": {
+        "atomic_number": 12,
+        "electronegativity": 1.31,
+        "group": 2,
+        "period": 3,
+        "atomic_mass": 24.305,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.22,
+        "element_category": "Alkaline Earth Metal"
+    },
+    "Al": {
+        "atomic_number": 13,
+        "electronegativity": 1.61,
+        "group": 13,
+        "period": 3,
+        "atomic_mass": 26.982,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.35,
+        "element_category": "Post-transition Metal"
+    },
+    "Si": {
+        "atomic_number": 14,
+        "electronegativity": 1.9,
+        "group": 14,
+        "period": 3,
+        "atomic_mass": 28.085,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.5,
+        "element_category": "Metalloid"
+    },
+    "P": {
+        "atomic_number": 15,
+        "electronegativity": 2.19,
+        "group": 15,
+        "period": 3,
+        "atomic_mass": 30.974,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.6,
+        "element_category": "Nonmetal"
+    },
+    "S": {
+        "atomic_number": 16,
+        "electronegativity": 2.58,
+        "group": 16,
+        "period": 3,
+        "atomic_mass": 32.06,
+        "valence_electrons": 6,
+        "hypothetical_binding_affinity": 0.75,
+        "element_category": "Nonmetal"
+    },
+    "Cl": {
+        "atomic_number": 17,
+        "electronegativity": 3.16,
+        "group": 17,
+        "period": 3,
+        "atomic_mass": 35.45,
+        "valence_electrons": 7,
+        "hypothetical_binding_affinity": 0.92,
+        "element_category": "Halogen"
+    },
+    "Ar": {
+        "atomic_number": 18,
+        "electronegativity": null,
+        "group": 18,
+        "period": 3,
+        "atomic_mass": 39.948,
+        "valence_electrons": 8,
+        "hypothetical_binding_affinity": 0.01,
+        "element_category": "Noble Gas"
+    },
+    "K": {
+        "atomic_number": 19,
+        "electronegativity": 0.82,
+        "group": 1,
+        "period": 4,
+        "atomic_mass": 39.098,
+        "valence_electrons": 1,
+        "hypothetical_binding_affinity": 0.1,
+        "element_category": "Alkali Metal"
+    },
+    "Ca": {
+        "atomic_number": 20,
+        "electronegativity": 1,
+        "group": 2,
+        "period": 4,
+        "atomic_mass": 40.078,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.18,
+        "element_category": "Alkaline Earth Metal"
+    },
+    "Sc": {
+        "atomic_number": 21,
+        "electronegativity": 1.36,
+        "group": 3,
+        "period": 4,
+        "atomic_mass": 44.956,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.3,
+        "element_category": "Transition Metal"
+    },
+    "Ti": {
+        "atomic_number": 22,
+        "electronegativity": 1.54,
+        "group": 4,
+        "period": 4,
+        "atomic_mass": 47.867,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.35,
+        "element_category": "Transition Metal"
+    },
+    "V": {
+        "atomic_number": 23,
+        "electronegativity": 1.63,
+        "group": 5,
+        "period": 4,
+        "atomic_mass": 50.942,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.4,
+        "element_category": "Transition Metal"
+    },
+    "Cr": {
+        "atomic_number": 24,
+        "electronegativity": 1.66,
+        "group": 6,
+        "period": 4,
+        "atomic_mass": 51.996,
+        "valence_electrons": 6,
+        "hypothetical_binding_affinity": 0.42,
+        "element_category": "Transition Metal"
+    },
+    "Mn": {
+        "atomic_number": 25,
+        "electronegativity": 1.55,
+        "group": 7,
+        "period": 4,
+        "atomic_mass": 54.938,
+        "valence_electrons": 7,
+        "hypothetical_binding_affinity": 0.38,
+        "element_category": "Transition Metal"
+    },
+    "Fe": {
+        "atomic_number": 26,
+        "electronegativity": 1.83,
+        "group": 8,
+        "period": 4,
+        "atomic_mass": 55.845,
+        "valence_electrons": 8,
+        "hypothetical_binding_affinity": 0.45,
+        "element_category": "Transition Metal"
+    },
+    "Co": {
+        "atomic_number": 27,
+        "electronegativity": 1.88,
+        "group": 9,
+        "period": 4,
+        "atomic_mass": 58.933,
+        "valence_electrons": 9,
+        "hypothetical_binding_affinity": 0.47,
+        "element_category": "Transition Metal"
+    },
+    "Ni": {
+        "atomic_number": 28,
+        "electronegativity": 1.91,
+        "group": 10,
+        "period": 4,
+        "atomic_mass": 58.693,
+        "valence_electrons": 10,
+        "hypothetical_binding_affinity": 0.48,
+        "element_category": "Transition Metal"
+    },
+    "Cu": {
+        "atomic_number": 29,
+        "electronegativity": 1.9,
+        "group": 11,
+        "period": 4,
+        "atomic_mass": 63.546,
+        "valence_electrons": 1,
+        "hypothetical_binding_affinity": 0.46,
+        "element_category": "Transition Metal"
+    },
+    "Zn": {
+        "atomic_number": 30,
+        "electronegativity": 1.65,
+        "group": 12,
+        "period": 4,
+        "atomic_mass": 65.38,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.33,
+        "element_category": "Transition Metal"
+    },
+    "Ga": {
+        "atomic_number": 31,
+        "electronegativity": 1.81,
+        "group": 13,
+        "period": 4,
+        "atomic_mass": 69.723,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.43,
+        "element_category": "Post-transition Metal"
+    },
+    "Ge": {
+        "atomic_number": 32,
+        "electronegativity": 2.01,
+        "group": 14,
+        "period": 4,
+        "atomic_mass": 72.63,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.52,
+        "element_category": "Metalloid"
+    },
+    "As": {
+        "atomic_number": 33,
+        "electronegativity": 2.18,
+        "group": 15,
+        "period": 4,
+        "atomic_mass": 74.922,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.62,
+        "element_category": "Metalloid"
+    },
+    "Se": {
+        "atomic_number": 34,
+        "electronegativity": 2.55,
+        "group": 16,
+        "period": 4,
+        "atomic_mass": 78.971,
+        "valence_electrons": 6,
+        "hypothetical_binding_affinity": 0.76,
+        "element_category": "Nonmetal"
+    },
+    "Br": {
+        "atomic_number": 35,
+        "electronegativity": 2.96,
+        "group": 17,
+        "period": 4,
+        "atomic_mass": 79.904,
+        "valence_electrons": 7,
+        "hypothetical_binding_affinity": 0.88,
+        "element_category": "Halogen"
+    },
+    "Kr": {
+        "atomic_number": 36,
+        "electronegativity": 3,
+        "group": 18,
+        "period": 4,
+        "atomic_mass": 83.798,
+        "valence_electrons": 8,
+        "hypothetical_binding_affinity": 0.02,
+        "element_category": "Noble Gas"
+    },
+    "Rb": {
+        "atomic_number": 37,
+        "electronegativity": 0.82,
+        "group": 1,
+        "period": 5,
+        "atomic_mass": 85.468,
+        "valence_electrons": 1,
+        "hypothetical_binding_affinity": 0.09,
+        "element_category": "Alkali Metal"
+    },
+    "Sr": {
+        "atomic_number": 38,
+        "electronegativity": 0.95,
+        "group": 2,
+        "period": 5,
+        "atomic_mass": 87.62,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.17,
+        "element_category": "Alkaline Earth Metal"
+    },
+    "Y": {
+        "atomic_number": 39,
+        "electronegativity": 1.22,
+        "group": 3,
+        "period": 5,
+        "atomic_mass": 88.906,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.28,
+        "element_category": "Transition Metal"
+    },
+    "Zr": {
+        "atomic_number": 40,
+        "electronegativity": 1.33,
+        "group": 4,
+        "period": 5,
+        "atomic_mass": 91.224,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.31,
+        "element_category": "Transition Metal"
+    },
+    "Nb": {
+        "atomic_number": 41,
+        "electronegativity": 1.6,
+        "group": 5,
+        "period": 5,
+        "atomic_mass": 92.906,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.39,
+        "element_category": "Transition Metal"
+    },
+    "Mo": {
+        "atomic_number": 42,
+        "electronegativity": 2.16,
+        "group": 6,
+        "period": 5,
+        "atomic_mass": 95.96,
+        "valence_electrons": 6,
+        "hypothetical_binding_affinity": 0.41,
+        "element_category": "Transition Metal"
+    },
+    "Tc": {
+        "atomic_number": 43,
+        "electronegativity": 1.9,
+        "group": 7,
+        "period": 5,
+        "atomic_mass": 98,
+        "valence_electrons": 7,
+        "hypothetical_binding_affinity": 0.37,
+        "element_category": "Transition Metal"
+    },
+    "Ru": {
+        "atomic_number": 44,
+        "electronegativity": 2.2,
+        "group": 8,
+        "period": 5,
+        "atomic_mass": 101.07,
+        "valence_electrons": 8,
+        "hypothetical_binding_affinity": 0.44,
+        "element_category": "Transition Metal"
+    },
+    "Rh": {
+        "atomic_number": 45,
+        "electronegativity": 2.28,
+        "group": 9,
+        "period": 5,
+        "atomic_mass": 102.91,
+        "valence_electrons": 9,
+        "hypothetical_binding_affinity": 0.49,
+        "element_category": "Transition Metal"
+    },
+    "Pd": {
+        "atomic_number": 46,
+        "electronegativity": 2.2,
+        "group": 10,
+        "period": 5,
+        "atomic_mass": 106.42,
+        "valence_electrons": 10,
+        "hypothetical_binding_affinity": 0.5,
+        "element_category": "Transition Metal"
+    },
+    "Ag": {
+        "atomic_number": 47,
+        "electronegativity": 1.93,
+        "group": 11,
+        "period": 5,
+        "atomic_mass": 107.87,
+        "valence_electrons": 1,
+        "hypothetical_binding_affinity": 0.45,
+        "element_category": "Transition Metal"
+    },
+    "Cd": {
+        "atomic_number": 48,
+        "electronegativity": 1.69,
+        "group": 12,
+        "period": 5,
+        "atomic_mass": 112.41,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.32,
+        "element_category": "Transition Metal"
+    },
+    "In": {
+        "atomic_number": 49,
+        "electronegativity": 1.78,
+        "group": 13,
+        "period": 5,
+        "atomic_mass": 114.82,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.42,
+        "element_category": "Post-transition Metal"
+    },
+    "Sn": {
+        "atomic_number": 50,
+        "electronegativity": 1.96,
+        "group": 14,
+        "period": 5,
+        "atomic_mass": 118.71,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.51,
+        "element_category": "Post-transition Metal"
+    },
+    "Sb": {
+        "atomic_number": 51,
+        "electronegativity": 2.05,
+        "group": 15,
+        "period": 5,
+        "atomic_mass": 121.76,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.61,
+        "element_category": "Metalloid"
+    },
+    "Te": {
+        "atomic_number": 52,
+        "electronegativity": 2.1,
+        "group": 16,
+        "period": 5,
+        "atomic_mass": 127.6,
+        "valence_electrons": 6,
+        "hypothetical_binding_affinity": 0.74,
+        "element_category": "Metalloid"
+    },
+    "I": {
+        "atomic_number": 53,
+        "electronegativity": 2.66,
+        "group": 17,
+        "period": 5,
+        "atomic_mass": 126.9,
+        "valence_electrons": 7,
+        "hypothetical_binding_affinity": 0.8,
+        "element_category": "Halogen"
+    },
+    "Xe": {
+        "atomic_number": 54,
+        "electronegativity": 2.6,
+        "group": 18,
+        "period": 5,
+        "atomic_mass": 131.29,
+        "valence_electrons": 8,
+        "hypothetical_binding_affinity": 0.03,
+        "element_category": "Noble Gas"
+    },
+    "Cs": {
+        "atomic_number": 55,
+        "electronegativity": 0.79,
+        "group": 1,
+        "period": 6,
+        "atomic_mass": 132.91,
+        "valence_electrons": 1,
+        "hypothetical_binding_affinity": 0.08,
+        "element_category": "Alkali Metal"
+    },
+    "Ba": {
+        "atomic_number": 56,
+        "electronegativity": 0.89,
+        "group": 2,
+        "period": 6,
+        "atomic_mass": 137.33,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.16,
+        "element_category": "Alkaline Earth Metal"
+    },
+    "La": {
+        "atomic_number": 57,
+        "electronegativity": 1.1,
+        "group": 3,
+        "period": 6,
+        "atomic_mass": 138.91,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.26,
+        "element_category": "Lanthanide"
+    },
+    "Ce": {
+        "atomic_number": 58,
+        "electronegativity": 1.12,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 140.12,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.27,
+        "element_category": "Lanthanide"
+    },
+    "Pr": {
+        "atomic_number": 59,
+        "electronegativity": 1.13,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 140.91,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.27,
+        "element_category": "Lanthanide"
+    },
+    "Nd": {
+        "atomic_number": 60,
+        "electronegativity": 1.14,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 144.24,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.27,
+        "element_category": "Lanthanide"
+    },
+    "Pm": {
+        "atomic_number": 61,
+        "electronegativity": 1.13,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 145,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.27,
+        "element_category": "Lanthanide"
+    },
+    "Sm": {
+        "atomic_number": 62,
+        "electronegativity": 1.17,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 150.36,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.28,
+        "element_category": "Lanthanide"
+    },
+    "Eu": {
+        "atomic_number": 63,
+        "electronegativity": 1.2,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 151.96,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.28,
+        "element_category": "Lanthanide"
+    },
+    "Gd": {
+        "atomic_number": 64,
+        "electronegativity": 1.2,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 157.25,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.28,
+        "element_category": "Lanthanide"
+    },
+    "Tb": {
+        "atomic_number": 65,
+        "electronegativity": 1.2,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 158.93,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.28,
+        "element_category": "Lanthanide"
+    },
+    "Dy": {
+        "atomic_number": 66,
+        "electronegativity": 1.22,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 162.5,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.29,
+        "element_category": "Lanthanide"
+    },
+    "Ho": {
+        "atomic_number": 67,
+        "electronegativity": 1.23,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 164.93,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.29,
+        "element_category": "Lanthanide"
+    },
+    "Er": {
+        "atomic_number": 68,
+        "electronegativity": 1.24,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 167.26,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.29,
+        "element_category": "Lanthanide"
+    },
+    "Tm": {
+        "atomic_number": 69,
+        "electronegativity": 1.25,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 168.93,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.3,
+        "element_category": "Lanthanide"
+    },
+    "Yb": {
+        "atomic_number": 70,
+        "electronegativity": 1.1,
+        "group": null,
+        "period": 6,
+        "atomic_mass": 173.05,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.3,
+        "element_category": "Lanthanide"
+    },
+    "Lu": {
+        "atomic_number": 71,
+        "electronegativity": 1.27,
+        "group": 3,
+        "period": 6,
+        "atomic_mass": 174.97,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.3,
+        "element_category": "Lanthanide"
+    },
+    "Hf": {
+        "atomic_number": 72,
+        "electronegativity": 1.3,
+        "group": 4,
+        "period": 6,
+        "atomic_mass": 178.49,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.31,
+        "element_category": "Transition Metal"
+    },
+    "Ta": {
+        "atomic_number": 73,
+        "electronegativity": 1.5,
+        "group": 5,
+        "period": 6,
+        "atomic_mass": 180.95,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.38,
+        "element_category": "Transition Metal"
+    },
+    "W": {
+        "atomic_number": 74,
+        "electronegativity": 2.36,
+        "group": 6,
+        "period": 6,
+        "atomic_mass": 183.84,
+        "valence_electrons": 6,
+        "hypothetical_binding_affinity": 0.4,
+        "element_category": "Transition Metal"
+    },
+    "Re": {
+        "atomic_number": 75,
+        "electronegativity": 1.9,
+        "group": 7,
+        "period": 6,
+        "atomic_mass": 186.21,
+        "valence_electrons": 7,
+        "hypothetical_binding_affinity": 0.36,
+        "element_category": "Transition Metal"
+    },
+    "Os": {
+        "atomic_number": 76,
+        "electronegativity": 2.2,
+        "group": 8,
+        "period": 6,
+        "atomic_mass": 190.23,
+        "valence_electrons": 8,
+        "hypothetical_binding_affinity": 0.43,
+        "element_category": "Transition Metal"
+    },
+    "Ir": {
+        "atomic_number": 77,
+        "electronegativity": 2.2,
+        "group": 9,
+        "period": 6,
+        "atomic_mass": 192.22,
+        "valence_electrons": 9,
+        "hypothetical_binding_affinity": 0.48,
+        "element_category": "Transition Metal"
+    },
+    "Pt": {
+        "atomic_number": 78,
+        "electronegativity": 2.28,
+        "group": 10,
+        "period": 6,
+        "atomic_mass": 195.08,
+        "valence_electrons": 10,
+        "hypothetical_binding_affinity": 0.51,
+        "element_category": "Transition Metal"
+    },
+    "Au": {
+        "atomic_number": 79,
+        "electronegativity": 2.54,
+        "group": 11,
+        "period": 6,
+        "atomic_mass": 196.97,
+        "valence_electrons": 1,
+        "hypothetical_binding_affinity": 0.44,
+        "element_category": "Transition Metal"
+    },
+    "Hg": {
+        "atomic_number": 80,
+        "electronegativity": 2,
+        "group": 12,
+        "period": 6,
+        "atomic_mass": 200.59,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.31,
+        "element_category": "Transition Metal"
+    },
+    "Tl": {
+        "atomic_number": 81,
+        "electronegativity": 1.62,
+        "group": 13,
+        "period": 6,
+        "atomic_mass": 204.38,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.41,
+        "element_category": "Post-transition Metal"
+    },
+    "Pb": {
+        "atomic_number": 82,
+        "electronegativity": 2.33,
+        "group": 14,
+        "period": 6,
+        "atomic_mass": 207.2,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.5,
+        "element_category": "Post-transition Metal"
+    },
+    "Bi": {
+        "atomic_number": 83,
+        "electronegativity": 2.02,
+        "group": 15,
+        "period": 6,
+        "atomic_mass": 208.98,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.6,
+        "element_category": "Post-transition Metal"
+    },
+    "Po": {
+        "atomic_number": 84,
+        "electronegativity": 2,
+        "group": 16,
+        "period": 6,
+        "atomic_mass": 209,
+        "valence_electrons": 6,
+        "hypothetical_binding_affinity": 0.73,
+        "element_category": "Post-transition Metal"
+    },
+    "At": {
+        "atomic_number": 85,
+        "electronegativity": 2.2,
+        "group": 17,
+        "period": 6,
+        "atomic_mass": 210,
+        "valence_electrons": 7,
+        "hypothetical_binding_affinity": 0.79,
+        "element_category": "Metalloid"
+    },
+    "Rn": {
+        "atomic_number": 86,
+        "electronegativity": 2.2,
+        "group": 18,
+        "period": 6,
+        "atomic_mass": 222,
+        "valence_electrons": 8,
+        "hypothetical_binding_affinity": 0.04,
+        "element_category": "Noble Gas"
+    },
+    "Fr": {
+        "atomic_number": 87,
+        "electronegativity": 0.7,
+        "group": 1,
+        "period": 7,
+        "atomic_mass": 223,
+        "valence_electrons": 1,
+        "hypothetical_binding_affinity": 0.07,
+        "element_category": "Alkali Metal"
+    },
+    "Ra": {
+        "atomic_number": 88,
+        "electronegativity": 0.9,
+        "group": 2,
+        "period": 7,
+        "atomic_mass": 226,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.15,
+        "element_category": "Alkaline Earth Metal"
+    },
+    "Ac": {
+        "atomic_number": 89,
+        "electronegativity": 1.1,
+        "group": 3,
+        "period": 7,
+        "atomic_mass": 227,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.25,
+        "element_category": "Actinide"
+    },
+    "Th": {
+        "atomic_number": 90,
+        "electronegativity": 1.3,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 232.04,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.26,
+        "element_category": "Actinide"
+    },
+    "Pa": {
+        "atomic_number": 91,
+        "electronegativity": 1.5,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 231.04,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.27,
+        "element_category": "Actinide"
+    },
+    "U": {
+        "atomic_number": 92,
+        "electronegativity": 1.38,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 238.03,
+        "valence_electrons": 6,
+        "hypothetical_binding_affinity": 0.28,
+        "element_category": "Actinide"
+    },
+    "Np": {
+        "atomic_number": 93,
+        "electronegativity": 1.36,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 237,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.28,
+        "element_category": "Actinide"
+    },
+    "Pu": {
+        "atomic_number": 94,
+        "electronegativity": 1.28,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 244,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.29,
+        "element_category": "Actinide"
+    },
+    "Am": {
+        "atomic_number": 95,
+        "electronegativity": 1.3,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 243,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.29,
+        "element_category": "Actinide"
+    },
+    "Cm": {
+        "atomic_number": 96,
+        "electronegativity": 1.3,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 247,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.29,
+        "element_category": "Actinide"
+    },
+    "Bk": {
+        "atomic_number": 97,
+        "electronegativity": 1.3,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 247,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.3,
+        "element_category": "Actinide"
+    },
+    "Cf": {
+        "atomic_number": 98,
+        "electronegativity": 1.3,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 251,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.3,
+        "element_category": "Actinide"
+    },
+    "Es": {
+        "atomic_number": 99,
+        "electronegativity": 1.3,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 252,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.3,
+        "element_category": "Actinide"
+    },
+    "Fm": {
+        "atomic_number": 100,
+        "electronegativity": 1.3,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 257,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.3,
+        "element_category": "Actinide"
+    },
+    "Md": {
+        "atomic_number": 101,
+        "electronegativity": 1.3,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 258,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.3,
+        "element_category": "Actinide"
+    },
+    "No": {
+        "atomic_number": 102,
+        "electronegativity": 1.3,
+        "group": null,
+        "period": 7,
+        "atomic_mass": 259,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.3,
+        "element_category": "Actinide"
+    },
+    "Lr": {
+        "atomic_number": 103,
+        "electronegativity": 1.3,
+        "group": 3,
+        "period": 7,
+        "atomic_mass": 262,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.31,
+        "element_category": "Actinide"
+    },
+    "Rf": {
+        "atomic_number": 104,
+        "electronegativity": null,
+        "group": 4,
+        "period": 7,
+        "atomic_mass": 267,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.32,
+        "element_category": "Transition Metal"
+    },
+    "Db": {
+        "atomic_number": 105,
+        "electronegativity": null,
+        "group": 5,
+        "period": 7,
+        "atomic_mass": 270,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.33,
+        "element_category": "Transition Metal"
+    },
+    "Sg": {
+        "atomic_number": 106,
+        "electronegativity": null,
+        "group": 6,
+        "period": 7,
+        "atomic_mass": 271,
+        "valence_electrons": 6,
+        "hypothetical_binding_affinity": 0.34,
+        "element_category": "Transition Metal"
+    },
+    "Bh": {
+        "atomic_number": 107,
+        "electronegativity": null,
+        "group": 7,
+        "period": 7,
+        "atomic_mass": 270,
+        "valence_electrons": 7,
+        "hypothetical_binding_affinity": 0.35,
+        "element_category": "Transition Metal"
+    },
+    "Hs": {
+        "atomic_number": 108,
+        "electronegativity": null,
+        "group": 8,
+        "period": 7,
+        "atomic_mass": 277,
+        "valence_electrons": 8,
+        "hypothetical_binding_affinity": 0.36,
+        "element_category": "Transition Metal"
+    },
+    "Mt": {
+        "atomic_number": 109,
+        "electronegativity": null,
+        "group": 9,
+        "period": 7,
+        "atomic_mass": 278,
+        "valence_electrons": 9,
+        "hypothetical_binding_affinity": 0.37,
+        "element_category": "Transition Metal"
+    },
+    "Ds": {
+        "atomic_number": 110,
+        "electronegativity": null,
+        "group": 10,
+        "period": 7,
+        "atomic_mass": 281,
+        "valence_electrons": 10,
+        "hypothetical_binding_affinity": 0.38,
+        "element_category": "Transition Metal"
+    },
+    "Rg": {
+        "atomic_number": 111,
+        "electronegativity": null,
+        "group": 11,
+        "period": 7,
+        "atomic_mass": 282,
+        "valence_electrons": 1,
+        "hypothetical_binding_affinity": 0.39,
+        "element_category": "Transition Metal"
+    },
+    "Cn": {
+        "atomic_number": 112,
+        "electronegativity": null,
+        "group": 12,
+        "period": 7,
+        "atomic_mass": 285,
+        "valence_electrons": 2,
+        "hypothetical_binding_affinity": 0.4,
+        "element_category": "Transition Metal"
+    },
+    "Nh": {
+        "atomic_number": 113,
+        "electronegativity": null,
+        "group": 13,
+        "period": 7,
+        "atomic_mass": 286,
+        "valence_electrons": 3,
+        "hypothetical_binding_affinity": 0.41,
+        "element_category": "Post-transition Metal"
+    },
+    "Fl": {
+        "atomic_number": 114,
+        "electronegativity": null,
+        "group": 14,
+        "period": 7,
+        "atomic_mass": 289,
+        "valence_electrons": 4,
+        "hypothetical_binding_affinity": 0.42,
+        "element_category": "Post-transition Metal"
+    },
+    "Mc": {
+        "atomic_number": 115,
+        "electronegativity": null,
+        "group": 15,
+        "period": 7,
+        "atomic_mass": 290,
+        "valence_electrons": 5,
+        "hypothetical_binding_affinity": 0.43,
+        "element_category": "Post-transition Metal"
+    },
+    "Lv": {
+        "atomic_number": 116,
+        "electronegativity": null,
+        "group": 16,
+        "period": 7,
+        "atomic_mass": 293,
+        "valence_electrons": 6,
+        "hypothetical_binding_affinity": 0.44,
+        "element_category": "Post-transition Metal"
+    },
+    "Ts": {
+        "atomic_number": 117,
+        "electronegativity": null,
+        "group": 17,
+        "period": 7,
+        "atomic_mass": 294,
+        "valence_electrons": 7,
+        "hypothetical_binding_affinity": 0.45,
+        "element_category": "Halogen"
+    },
+    "Og": {
+        "atomic_number": 118,
+        "electronegativity": null,
+        "group": 18,
+        "period": 7,
+        "atomic_mass": 294,
+        "valence_electrons": 8,
+        "hypothetical_binding_affinity": 0.05,
+        "element_category": "Noble Gas"
+    }
+}

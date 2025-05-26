@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Compound Analyzer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            padding: 40px;
+        }
+
+        .selection-phase {
+            text-align: center;
+        }
+
+        .input-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input-group label {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .element-input {
+            padding: 15px 20px;
+            font-size: 1.1em;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .element-input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+        }
+
+        .periodic-table {
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: repeat(18, 1fr);
+            gap: 2px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .element {
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            min-height: 50px;
+        }
+
+        .element:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .element.selected {
+            border: 4px solid #fff;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 60px rgba(255, 255, 255, 0.6);
+            }
+
+            100% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        /* Category Colors */
+        .nonmetal {
+            background: #4caf50;
+        }
+
+        .noble-gas {
+            background: #ff9800;
+        }
+
+        .alkali-metal {
+            background: #f44336;
+        }
+
+        .alkaline-earth-metal {
+            background: #2196f3;
+        }
+
+        .metalloid {
+            background: #9c27b0;
+        }
+
+        .halogen {
+            background: #3f51b5;
+        }
+
+        .post-transition-metal {
+            background: #607d8b;
+        }
+
+        .transition-metal {
+            background: #795548;
+        }
+
+        .lanthanide {
+            background: #009688;
+        }
+
+        .actinide {
+            background: #e91e63;
+        }
+
+        /* Button & Loading */
+        .analyze-btn {
+            background: linear-gradient(45deg, #e74c3c, #f39c12);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .analyze-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .results-phase {
+            display: none;
+        }
+
+        .error-message {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            display: none;
+        }
+
+        @media (max-width:768px) {
+            .periodic-table {
+                grid-template-columns: repeat(9, 1fr);
+                gap: 1px;
+            }
+
+            .element {
+                min-height: 40px;
+                font-size: 0.7em;
+            }
+
+            .input-section {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧪 Drug Compound Analyzer</h1>
+            <p>Discover the pharmaceutical potential of element combinations</p>
+        </div>
+        <div class="main-content">
+            <div class="selection-phase" id="selectionPhase">
+                <div class="input-section">
+                    <div class="input-group"><label for="element1">First Element</label><input type="text" id="element1"
+                            class="element-input" placeholder="e.g., H" maxlength="2"></div>
+                    <div class="input-group"><label for="element2">Second Element</label><input type="text"
+                            id="element2" class="element-input" placeholder="e.g., O" maxlength="2"></div>
+                </div>
+                <div class="periodic-table" id="periodicTable"></div>
+                <button class="analyze-btn" id="analyzeBtn" disabled>Analyze Compound</button>
+            </div>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Analyzing compound formation...</p>
+            </div>
+            <div class="results-phase" id="resultsPhase">
+                <div class="results-card">
+                    <div class="confidence-score">
+                        <div class="confidence-circle" id="confidenceCircle"><span id="confidenceValue">--</span>%</div>
+                        <h3 id="resultTitle">Analysis Complete</h3>
+                    </div>
+                    <div class="summary-section">
+                        <h3>🤖 AI Analysis Summary</h3>
+                        <p id="aiSummary">Loading analysis...</p>
+                    </div>
+                    <div class="element-info" id="elementInfo"></div>
+                    <div style="text-align:center;margin-top:30px;"><button class="back-btn" id="backBtn">Analyze
+                            Another Compound</button></div>
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage"><span id="errorText"></span></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let elementsData = {};
+            const el1Input = document.getElementById('element1');
+            const el2Input = document.getElementById('element2');
+            const analyzeBtn = document.getElementById('analyzeBtn');
+
+            // Load and initialize
+            loadElements();
+
+            [el1Input, el2Input].forEach(inp => inp.addEventListener('input', () => { inp.value = inp.value.toUpperCase().trim(); updateSelectedElements(); }));
+            analyzeBtn.addEventListener('click', () => { if (!analyzeBtn.disabled) analyzeCompound(); });
+            document.getElementById('backBtn').addEventListener('click', resetApp);
+
+            function getCategoryClass(cat) { return cat.toLowerCase().replace(/\s+/g, '-'); }
+
+            async function loadElements() {
+                try {
+                    const res = await fetch('/api/elements');
+                    if (!res.ok) throw new Error(`Status: ${res.status}`);
+                    elementsData = await res.json();
+                    generatePeriodicTable();
+                    updateSelectedElements();
+                } catch (e) { showError(`Failed to load elements: ${e.message}`); }
+            }
+
+            function generatePeriodicTable() {
+                const table = document.getElementById('periodicTable'); table.innerHTML = '';
+                Object.entries(elementsData).forEach(([sym, data]) => {
+                    const d = document.createElement('div');
+                    d.className = `element ${getCategoryClass(data.element_category)}`;
+                    d.dataset.symbol = sym;
+                    d.innerHTML = `<div class="number">${data.atomic_number}</div><div class="symbol">${sym}</div>`;
+                    d.addEventListener('click', () => selectElement(sym));
+                    table.appendChild(d);
+                });
+            }
+
+            function selectElement(sym) {
+                if (!el1Input.value) el1Input.value = sym;
+                else if (!el2Input.value && el1Input.value !== sym) el2Input.value = sym;
+                else { el1Input.value = sym; el2Input.value = ''; }
+                updateSelectedElements();
+            }
+
+            function updateSelectedElements() {
+                const e1 = el1Input.value, e2 = el2Input.value;
+                document.querySelectorAll('.element').forEach(el => el.classList.toggle('selected', [e1, e2].includes(el.dataset.symbol)));
+                const valid = e1 && e2 && e1 !== e2 && elementsData[e1] && elementsData[e2];
+                analyzeBtn.disabled = !valid;
+                analyzeBtn.style.opacity = valid ? '1' : '0.6';
+                analyzeBtn.style.cursor = valid ? 'pointer' : 'not-allowed';
+            }
+
+            async function analyzeCompound() {
+                hideError(); showLoading();
+                const payload = { element1: el1Input.value, element2: el2Input.value };
+                try {
+                    const res = await fetch('/api/analyze', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                    if (!res.ok) throw new Error(res.statusText);
+                    const data = await res.json();
+                    if (data.error) throw new Error(data.error);
+                    displayResults(data);
+                } catch (e) { showError(`Analysis failed: ${e.message}`); }
+                finally { hideLoading(); }
+            }
+
+            function displayResults(r) {
+                document.getElementById('selectionPhase').style.display = 'none';
+                document.getElementById('resultsPhase').style.display = 'block';
+                document.getElementById('confidenceValue').textContent = r.confidence_score;
+                const cc = document.getElementById('confidenceCircle'); cc.className = 'confidence-circle';
+                cc.classList.add(r.confidence_score >= 75 ? 'high-confidence' : r.confidence_score >= 50 ? 'medium-confidence' : 'low-confidence');
+                document.getElementById('resultTitle').textContent = r.forms_drug ? `${r.element1}-${r.element2} Shows Drug Potential!` : `${r.element1}-${r.element2} Limited Drug Potential`;
+                document.getElementById('aiSummary').textContent = r.ai_summary;
+                const info = document.getElementById('elementInfo'); info.innerHTML =
+                    `<div class="element-card"><h4>${r.element1} - ${r.element_data[r.element1].element_category}</h4>` +
+                    `<div class="property"><span>Atomic Number:</span><span>${r.element_data[r.element1].atomic_number}</span></div>` +
+                    `<div class="property"><span>Atomic Mass:</span><span>${r.element_data[r.element1].atomic_mass}</span></div>` +
+                    `<div class="property"><span>Electronegativity:</span><span>${r.element_data[r.element1].electronegativity}</span></div>` +
+                    `<div class="property"><span>Binding Affinity:</span><span>${r.element_data[r.element1].hypothetical_binding_affinity}</span></div></div>` +
+                    `<div class="element-card"><h4>${r.element2} - ${r.element_data[r.element2].element_category}</h4>` +
+                    `<div class="property"><span>Atomic Number:</span><span>${r.element_data[r.element2].atomic_number}</span></div>` +
+                    `<div class="property"><span>Atomic Mass:</span><span>${r.element_data[r.element2].atomic_mass}</span></div>` +
+                    `<div class="property"><span>Electronegativity:</span><span>${r.element_data[r.element2].electronegativity}</span></div>` +
+                    `<div class="property"><span>Binding Affinity:</span><span>${r.element_data[r.element2].hypothetical_binding_affinity}</span></div></div>`;
+            }
+
+            function showLoading() { document.getElementById('selectionPhase').style.display = 'none'; document.getElementById('loading').style.display = 'block'; }
+            function hideLoading() { document.getElementById('loading').style.display = 'none'; }
+            function showError(msg) { const e = document.getElementById('errorMessage'); document.getElementById('errorText').textContent = msg; e.style.display = 'block'; hideLoading(); }
+            function hideError() { document.getElementById('errorMessage').style.display = 'none'; }
+            function resetApp() {
+                document.getElementById('selectionPhase').style.display = 'block';
+                document.getElementById('resultsPhase').style.display = 'none';
+                el1Input.value = ''; el2Input.value = ''; analyzeBtn.disabled = true;
+                document.querySelectorAll('.element').forEach(el => el.classList.remove('selected'));
+                hideError();
+            }
+        });
+    </script>
+</body>
+
+</html>
