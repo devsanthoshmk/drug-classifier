@@ -261,6 +261,60 @@
             }
         }
     </style>
+    <style>
+        /* 1. Ensure your results wrapper is hidden by default via the ID */
+#resultsPhase {
+  display: none;
+}
+
+/* 2. Confidence‐circle base */
+#confidenceCircle,
+.confidence-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 1em auto;
+  transition: background 0.3s ease;
+  display: flex;
+      flex-direction: row;
+    align-content: flex-end;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 3. Confidence‐level colours */
+.high-confidence {
+  background: #4caf50;
+}
+.medium-confidence {
+  background: #ffeb3b;
+}
+.low-confidence {
+  background: #f44336;
+}
+
+/* 4. Element info cards */
+.element-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* 5. Key/value rows inside cards */
+.property {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+.property span:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+    </style>
 </head>
 
 <body>
@@ -295,7 +349,7 @@
                         <p id="aiSummary">Loading analysis...</p>
                     </div>
                     <div class="element-info" id="elementInfo"></div>
-                    <div style="text-align:center;margin-top:30px;"><button class="back-btn" id="backBtn">Analyze
+                    <div style="text-align:center;margin-top:30px;"><button class="analyze-btn" id="backBtn">Analyze
                             Another Compound</button></div>
                 </div>
             </div>
@@ -371,26 +425,30 @@
                 finally { hideLoading(); }
             }
 
-            function displayResults(r) {
-                document.getElementById('selectionPhase').style.display = 'none';
-                document.getElementById('resultsPhase').style.display = 'block';
-                document.getElementById('confidenceValue').textContent = r.confidence_score;
-                const cc = document.getElementById('confidenceCircle'); cc.className = 'confidence-circle';
-                cc.classList.add(r.confidence_score >= 75 ? 'high-confidence' : r.confidence_score >= 50 ? 'medium-confidence' : 'low-confidence');
-                document.getElementById('resultTitle').textContent = r.forms_drug ? `${r.element1}-${r.element2} Shows Drug Potential!` : `${r.element1}-${r.element2} Limited Drug Potential`;
-                document.getElementById('aiSummary').textContent = r.ai_summary;
-                const info = document.getElementById('elementInfo'); info.innerHTML =
-                    `<div class="element-card"><h4>${r.element1} - ${r.element_data[r.element1].element_category}</h4>` +
-                    `<div class="property"><span>Atomic Number:</span><span>${r.element_data[r.element1].atomic_number}</span></div>` +
-                    `<div class="property"><span>Atomic Mass:</span><span>${r.element_data[r.element1].atomic_mass}</span></div>` +
-                    `<div class="property"><span>Electronegativity:</span><span>${r.element_data[r.element1].electronegativity}</span></div>` +
-                    `<div class="property"><span>Binding Affinity:</span><span>${r.element_data[r.element1].hypothetical_binding_affinity}</span></div></div>` +
-                    `<div class="element-card"><h4>${r.element2} - ${r.element_data[r.element2].element_category}</h4>` +
-                    `<div class="property"><span>Atomic Number:</span><span>${r.element_data[r.element2].atomic_number}</span></div>` +
-                    `<div class="property"><span>Atomic Mass:</span><span>${r.element_data[r.element2].atomic_mass}</span></div>` +
-                    `<div class="property"><span>Electronegativity:</span><span>${r.element_data[r.element2].electronegativity}</span></div>` +
-                    `<div class="property"><span>Binding Affinity:</span><span>${r.element_data[r.element2].hypothetical_binding_affinity}</span></div></div>`;
-            }
+           function displayResults(r) {
+  // 1) toggle phases
+  document.getElementById('selectionPhase').style.display = 'none';
+  document.getElementById('resultsPhase').style.display   = 'block';
+
+  // 2) confidence score + coloured circle
+  document.getElementById('confidenceValue').textContent = r.confidence_score;
+  const cc = document.getElementById('confidenceCircle');
+  cc.className = 'confidence-circle';
+  cc.classList.add(
+    r.confidence_score >= 75 ? 'high-confidence'
+      : r.confidence_score >= 50 ? 'medium-confidence'
+      : 'low-confidence'
+  );
+
+  // 3) title & summary
+  document.getElementById('resultTitle').textContent =
+    r.forms_drug
+      ? `${r.element1} – ${r.element2} Shows Drug Potential!`
+      : `${r.element1} – ${r.element2} Limited Drug Potential`;
+  document.getElementById('aiSummary').textContent = r.ai_summary;
+
+}
+
 
             function showLoading() { document.getElementById('selectionPhase').style.display = 'none'; document.getElementById('loading').style.display = 'block'; }
             function hideLoading() { document.getElementById('loading').style.display = 'none'; }

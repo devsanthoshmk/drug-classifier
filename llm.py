@@ -1,43 +1,53 @@
-from llama_cpp import Llama
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+import torch
 
-# 1) Initialize once at startup
-llm = Llama(
-    model_path="~/models/TinyLlama/tinyllama-4bit.bin",  # path to your quantized GGML model
-    n_ctx=512,       # max context tokens
-    n_threads=2,     # leverage both CPU cores
+model_id = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+
+# 1. Load tokenizer & model
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+model = AutoModelForCausalLM.from_pretrained(
+    model_id,
+    torch_dtype=torch.bfloat16,
+    device_map="auto",
 )
 
-def generate_text(
-    prompt: str,
-    max_tokens: int = 100,
-    temperature: float = 0.7,
-    top_p: float = 0.95,
-) -> str:
-    """
-    Generate text with TinyLlama via llama.cpp.
+# ensure there is a pad_token
+if tokenizer.pad_token_id is None:
+    tokenizer.pad_token_id = tokenizer.eos_token_id
 
-    Args:
-        prompt: the user’s input string
-        max_tokens: max tokens to generate
-        temperature: randomness control (0.0–1.0)
-        top_p: nucleus sampling threshold
+# 2. Create a chat pipeline
+chat = pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    return_full_text=False,      # only the assistant's reply
+)
 
-    Returns:
-        The generated text (stripped of leading/trailing whitespace).
-    """
-    response = llm(
-        prompt,
-        max_tokens=max_tokens,
-        temperature=temperature,
-        top_p=top_p,
-        stop=["\n"]
+def get_element_cures(elements: str) -> list[str]:
+    # 3. System prompt asks for a COMMA-SEPARATED list of cures
+    system_prompt = (
+        "You are a medical-chemistry assistant.\n"
+        "When given two or more chemical elements, identify which diseases or medical conditions "
+        "a drug containing those elements (along with its other components) can treat.\n"
+        "Important:\n"
+        "• Output ONLY a plain paragraph of conditions or treatments, one per line.\n"
+        "• Do NOT mention element names, chemical terms, side-effects, explanations, or ask questions."
     )
-    # Extract the first choice’s text
-    text = response.get("choices", [{}])[0].get("text", "")
-    return text.strip()
 
-# --- Example usage ---
+    # user_prompt = f"{elements}\ngive me a paragraph of only the treatments, nothing more."
+
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user",   "content": elements},
+    ]
+    # 4. Generate
+    response = chat(messages, max_new_tokens=512, temperature=0.9, top_p=0.9)
+    text = response[0]["generated_text"].strip()
+    
+    # 5. Split on commas and strip whitespace
+    return text
+
 if __name__ == "__main__":
-    user_query = "Explain the benefits of lightweight LLMs on edge devices."
-    ai_reply = generate_text(user_query, max_tokens=150)
-    print("AI:", ai_reply)
+    cures = get_element_cures("Hydrogen + oxygen")
+    print(cures)
+    # e.g. ["Wound disinfection"]
